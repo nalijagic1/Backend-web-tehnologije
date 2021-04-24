@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<HTML>
+
+<HEAD>
+    <TITLE>Raspored</TITLE>
+    <script src="raspored.js"></script>
+    <script>
+        let r = new Raspored(`BWT-grupa2,vjezbe,ponedjeljak,13:30,15:00\nBWT,predavanje,ponedjeljak,15:00,18:00\nMUR1,predavanje,utorak,09:00,11:00\nMUR1-grupa1,vjezbe,srijeda,11:00,12:30\nMUR1-grupa2,vjezbe,srijeda,12:30,14:00\nRMA,predavanje,ponedjeljak,09:00,12:00\nBWT-grupa1,vjezbe,ponedjeljak,12:00,13:30\nFWT-grupa2,vjezbe,srijeda,11:00,12:30\nFWT-grupa1,vjezbe,srijeda,12:30,14:00\nASP,predavanje,srijeda,09:00,12:00\nMUR2,predavanje,cetvrtak,12:00,15:00\nFWT,predavanje,cetvrtak,09:00,10:30`);
+        function Trenutno() {
+            let vrijeme = document.getElementById("datum").value + "T" + document.getElementById("vrijeme").value;
+            alert(r.dajTrenutnuAktivnost(vrijeme, document.getElementById("grupa").value));
+        }
+        function Sljedece() {
+            let vrijeme = document.getElementById("datum").value + "T" + document.getElementById("vrijeme").value;
+            alert(r.dajSljedecuAktivnost(vrijeme, document.getElementById("grupa").value));
+        }
+        function Proslo() {
+            let vrijeme = document.getElementById("datum").value + "T" + document.getElementById("vrijeme").value;
+            alert(r.dajPrethodnuAktivnost(vrijeme, document.getElementById("grupa").value));
+        }
+    </script>
+    <meta charset="UTF-8">
+</HEAD>
+
+<body>
+    <p>BWT-grupa2,vjezbe,ponedjeljak,13:30,15:00</p>
+    <p>BWT,predavanje,ponedjeljak,15:00,18:00</p>
+    <p>MUR1,predavanje,utorak,09:00,11:00</p>
+    <p>MUR1-grupa1,vjezbe,srijeda,11:00,12:30</p>
+    <p> MUR1-grupa2,vjezbe,srijeda,12:30,14:00</p>
+    <p>RMA,predavanje,ponedjeljak,09:00,12:00</p>
+    <p>BWT-grupa1,vjezbe,ponedjeljak,12:00,13:30</p>
+    <p>FWT-grupa2,vjezbe,srijeda,11:00,12:30</p>
+    <p>FWT-grupa1,vjezbe,srijeda,12:30,14:00</p>
+    <p>ASP,predavanje,srijeda,09:00,12:00</p>
+    <p>MUR2,predavanje,cetvrtak,12:00,15:00</p>
+    <p>FWT,predavanje,cetvrtak,09:00,10:30</p>
+
+    <label for="grupa">Odaberi grupu:</label>
+    <select name="grupa" id="grupa">
+        <option value="grupa1">Grupa 1</option>
+        <option value="grupa2">Grupa 2</option>
+    </select>
+    <label for="classroom">Unesite datum(format mm-dd-yyyy)</label>
+    <input type="text" id="datum" name="datum">
+    <label for="class">Unesite vrijeme(format hh:mm:ss)</label>
+    <input type="text" id="vrijeme" name="vrijeme">
+    <div>
+        <button type="button" onclick="Trenutno()">Daj Trenutnu Aktivnost</button>
+        <button type="button" onclick="Sljedece()">Daj Slijedeće predavanje</button>
+        <button type="button" onclick="Proslo()">Daj Prethodno predavanje</button>
+    </div>
+</BODY>
+
+</HTML>

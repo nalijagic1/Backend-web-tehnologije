@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stil.css">
+       
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Spirala 4</title>
+    </head>
+    <body>
+        <div class="unos_studenta">
+            
+            <div class="form">
+            <form class="unos-form" enctype="application/x-www-form-urlencoded" >
+                    <label for="studenti">Dodavanje studenata:</label>
+                    <textarea id="studenti" name="students" rows="10" cols="50"></textarea>
+                    <label for="groups">Odaberite grupu:</label>
+                    <select name="grupa" id="groups"></select>
+                <button type="button" onclick="dodajStudente()">Submit</button>
+            </form>
+            </div>
+            
+        </div>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="studentAjax.js"></script>
+      </body>
+     
+</html>

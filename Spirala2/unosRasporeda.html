@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stil.css">
+       
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Spirala 2</title>
+    </head>
+    <body>
+        <div class="login-page">
+            <div class="form">
+            <form class="login-form" onsubmit="return validiraj()" method="POST"  action="http://localhost:8080/raspored" enctype="application/x-www-form-urlencoded" >
+                <input type="text" placeholder="predmet" name="naziv" id="name" required />
+                <input type="text" placeholder="aktivnost" name="aktivnost" id="activity"required/>
+                <input type="text" placeholder="dan" name="dan" id="day" required/>
+                <input type="text" placeholder="pocetak" name="pocetak" id="start" required/>
+                <input type="text" placeholder="kraj" name="kraj" id="end" required/>
+                <button type="submit">Submit</button>
+            </form>
+            </div>
+        </div>
+         <script src="validate.js"></script>
+      </body>
+     
+</html>

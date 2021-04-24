@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stil.css">
+       
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Spirala 2</title>
+    </head>
+    <body>
+        <div class="login-page">
+            
+            <div class="form">
+            <form class="login-form" enctype="application/x-www-form-urlencoded" >
+                <input type="text" placeholder="predmet" name="naziv" id="name" required />
+                <input type="text" placeholder="aktivnost" name="aktivnost" id="activity"required/>
+                <input type="text" placeholder="dan" name="dan" id="day" required/>
+                <input type="text" placeholder="pocetak" name="pocetak" id="start" required/>
+                <input type="text" placeholder="kraj" name="kraj" id="end" required/>
+                <button type="button" onclick="if(validiraj())raspored()" >Submit</button>
+            </form>
+            <h2>Lista predmeta</h2>
+            <ol id="predmet"></ol>
+            <h2>Tabela aktivnosti</h2>
+            <table id ="aktivnost"></table>
+            </div>
+            
+        </div>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script src="validate.js"></script>
+         <script src="unosAjax.js"></script>
+      </body>
+     
+</html>
